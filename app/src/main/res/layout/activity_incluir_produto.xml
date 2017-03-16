@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_incluir_produto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.pricedog.pricedogapp.IncluirProdutoActivity"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/descricao_produto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Produto"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quantidade: "/>
+
+
+    <Button
+        android:id="@+id/botao_menos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        style="@style/Widget.AppCompat.Button.Small" />
+
+    <EditText
+        android:id="@+id/quantidade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:text="1"/>
+
+    <Button
+        android:id="@+id/botao_mais"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        style="@style/Widget.AppCompat.Button.Small" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Preço: "/>
+
+    <EditText
+        android:id="@+id/preco_unitario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:text="0.00"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Valor Total: "/>
+
+    <EditText
+        android:id="@+id/valor_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.00"
+        android:enabled="false" />
+
+    <Button
+        android:id="@+id/botao_confirmar_produto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OK"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
+
+</LinearLayout>

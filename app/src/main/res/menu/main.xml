@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/incluir_produto"
+        android:orderInCategory="100"
+        app:showAsAction="always"
+        android:icon="@android:drawable/ic_menu_add" />
+
+    <item
+        android:id="@+id/renomear_lista"
+        android:orderInCategory="100"
+        android:title="Renomear"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/excluir_lista"
+        android:orderInCategory="100"
+        android:title="Excluir"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/salvar_lista"
+        android:orderInCategory="100"
+        android:title="Salvar"
+        app:showAsAction="never" />
+
+</menu>
