@@ -1,22 +1,24 @@
 package com.pricedog.pricedogapp.modelo;
 
 
-import android.os.Parcel;
-import android.os.Parcelable;
-
-import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Stream;
 
 /**
  * Created by yurinasci on 20/02/17.
  */
 
 public class ListaDeCompras {
-    private long id;
-    private String nome;
-    public ArrayList<Item> itens;
+    protected long id;
+    protected String nome;
+    protected ArrayList<Item> itens;
+
+    public ArrayList<Item> getItens() {
+        return itens;
+    }
+
+    public void setItens(ArrayList<Item> itens) {
+        this.itens = itens;
+    }
 
     public ListaDeCompras()  {
         itens = new ArrayList<>();
@@ -42,4 +44,5 @@ public class ListaDeCompras {
 
     public float getTotalDaLista()  {
         return 0;}
+
 }

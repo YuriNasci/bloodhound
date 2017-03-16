@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity
 
     private void carregaLista() {
         ArrayAdapter<Item> adapter = new ArrayAdapter<>(this,
-                android.R.layout.simple_list_item_1, listaDeComprasAtual.itens);
+                android.R.layout.simple_list_item_1, listaDeComprasAtual.getItens());
 
         listaDeComprasView.setAdapter(adapter);
 
@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity
         switch (item.getItemId())  {
             case R.id.incluir_produto:
                 Intent intent = new Intent(MainActivity.this, IncluirItemActivity.class);
-                intent.putParcelableArrayListExtra("listaDeCompras", listaDeComprasAtual.itens);
+                intent.putParcelableArrayListExtra("listaDeCompras", listaDeComprasAtual.getItens());
                 startActivityForResult(intent, REQUEST_CODE);
                 return false;
             case R.id.salvar_lista:
@@ -165,7 +165,7 @@ public class MainActivity extends AppCompatActivity
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == REQUEST_CODE) {
             if(resultCode == Activity.RESULT_OK)
-                listaDeComprasAtual.itens = data.getParcelableArrayListExtra("listaDeCompras");
+                listaDeComprasAtual.setItens(data.<Item>getParcelableArrayListExtra("listaDeCompras"));
         }
     }
 
