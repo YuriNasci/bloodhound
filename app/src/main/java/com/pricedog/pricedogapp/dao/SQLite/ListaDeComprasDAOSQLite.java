@@ -21,7 +21,7 @@ public class ListaDeComprasDAOSQLite extends SQLiteOpenHelper implements ListaDe
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String ddl = "create table " + TABELA +" (id integer primary key autoincrement, "
+        String ddl = "create table " + TABELA + " (id integer primary key autoincrement, "
                 + " nome text not null);";
 
         db.execSQL(ddl);

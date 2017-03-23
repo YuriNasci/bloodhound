@@ -3,37 +3,28 @@ package com.pricedog.pricedogapp.modelo;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import java.io.Serializable;
-
 /**
  * Created by yurinasci on 09/03/17.
  */
 
 public class Item  implements Parcelable{
+    private long id_lista;
     private Produto produto;
     private float quantidade, precoUnitario;
-
-    protected Item(Parcel in) {
-        quantidade = in.readFloat();
-        precoUnitario = in.readFloat();
-        produto = (Produto) in.readValue(Produto.class.getClassLoader());
-    }
 
     public Item()  {
         produto = new Produto();
     }
 
-    public static final Creator<Item> CREATOR = new Creator<Item>() {
-        @Override
-        public Item createFromParcel(Parcel in) {
-            return new Item(in);
-        }
+    public long getId_Produto()  {return  produto.getId();}
 
-        @Override
-        public Item[] newArray(int size) {
-            return new Item[size];
-        }
-    };
+    public long getId_lista() {
+        return id_lista;
+    }
+
+    public void setId_lista(long id_lista) {
+        this.id_lista = id_lista;
+    }
 
     public float getTotalDoItem()  {
         return quantidade * precoUnitario;
@@ -66,6 +57,24 @@ public class Item  implements Parcelable{
     public String toString()  {
         return produto.toString() + " " + this.quantidade + " " + getTotalDoItem();
     }
+    // Métodos responsáveis por implementar o Parcelable
+    protected Item(Parcel in) {
+        quantidade = in.readFloat();
+        precoUnitario = in.readFloat();
+        produto = (Produto) in.readValue(Produto.class.getClassLoader());
+    }
+
+    public static final Creator<Item> CREATOR = new Creator<Item>() {
+        @Override
+        public Item createFromParcel(Parcel in) {
+            return new Item(in);
+        }
+
+        @Override
+        public Item[] newArray(int size) {
+            return new Item[size];
+        }
+    };
 
     @Override
     public int describeContents() {

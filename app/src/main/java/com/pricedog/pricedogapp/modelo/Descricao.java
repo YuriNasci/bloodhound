@@ -90,7 +90,7 @@ public class Descricao implements Parcelable{
 		String string = new String();
 
 		if (tipo != null)
-			string += " " + tipo;
+			string += tipo;
 		if (embalagem != null)
 			string += " " + embalagem;
 		if (marca != null)

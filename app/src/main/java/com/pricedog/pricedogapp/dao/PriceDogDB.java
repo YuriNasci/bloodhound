@@ -6,5 +6,5 @@ package com.pricedog.pricedogapp.dao;
 
 public class PriceDogDB {
     public static final String NOME = "pricedog";
-    public static final int VERSAO = 11;
+    public static final int VERSAO = 14;
 }

@@ -40,9 +40,14 @@ public class ListaDeCompras {
         this.nome = nome;
     }
 
-    public int getTotalDeItens()  {return 0;}
+    public int getTotalDeItens()  {
+        return itens.size();
+    }
 
     public float getTotalDaLista()  {
-        return 0;}
+        float total_da_lista = 0;
 
+        for (Item item: itens) total_da_lista += item.getTotalDoItem();
+
+        return 0;}
 }
